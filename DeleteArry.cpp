@@ -20,9 +20,9 @@ void Display(struct Array arr)
     }
 }
 
-void Delete(struct Array *arr,int index)
+index Delete(struct Array *arr,int index)
 {
-    if(index<arr->size)
+    if(index>0 && index<arr->size)
     {
         int x=arr->A[index];
         int i;
@@ -31,7 +31,10 @@ void Delete(struct Array *arr,int index)
             arr->A[i]=arr->A[i+1];
         }
         arr->length--;
+        cout<<"Deleted Element is "<<endl;
+        return x;
     }
+    cout<<"Your index is Not valid plese try again "<<endl;
 }
 int main()
 {
