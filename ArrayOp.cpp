@@ -29,7 +29,7 @@ void Append(struct Array *arr,int n)
 
 void Insertatindex(struct Array *arr,int index,int e)
 {
-    if(arr->length<arr->size)
+    if(index && index<arr->size)
     {
         int i;
         for(i=arr->length;i>index;i--)
